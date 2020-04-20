@@ -13,4 +13,6 @@
       vpc_subnet_id:      "{{vpc_subnet_id}}"
       assign_public_ip:   "{{assign_public_ip}}"
       region:              "{{region}}"
+      #instance_tags:
+          #Name: Created_by_ansible
     

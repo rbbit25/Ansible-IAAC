@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  vars_files: 
+  - region.yaml
+  tasks:
+  - name: create key pair using provided key_material
+    ec2_key:
+      name: bastion_host
+      region: "{{region}}"
+      #state: absent
+      key_material: "{{key_material}}"

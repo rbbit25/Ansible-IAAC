@@ -9,6 +9,7 @@
       region: "{{region}}"   #identify region 
       vpc_id: "{{vpc_id}}"   #specify vpc id 
       cidr: "{{cidr}}"       #cidr block
+      #map_public: yes       #To make the subnet public 
       tags:
         Name: "{{name}}"
     register: "{{register}}"

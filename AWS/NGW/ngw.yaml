@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars_files: 
+  - ngw_info.yaml
+  tasks:
+  - name: create NG
+    ec2_vpc_nat_gateway:
+      region: "{{region}}"
+      subnet_id: "{{subnet_id}}"
+      allocation_id: "{{allocation_id}}"
+      state: present
+    register: igw

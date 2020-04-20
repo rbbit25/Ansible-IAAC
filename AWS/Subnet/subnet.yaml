@@ -1,5 +1,5 @@
 ---
-- host: localhost
+- hosts: localhost
   vars_files: 
   - subnet_info.yaml
   tasks: 
@@ -11,5 +11,5 @@
       cidr: "{{cidr}}"       #cidr block
       #map_public: yes       #To make the subnet public 
       tags:
-        Name: "{{name}}"
-    register: "{{register}}"
+        Name: dev
+    register: private_subnet_1

@@ -1,0 +1,3 @@
+region: "region"
+vpc_id: "vpc_id"
+cidr:   "cidr"

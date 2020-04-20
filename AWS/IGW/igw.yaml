@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars_files: 
+  - igw_info.yaml
+  tasks:
+    - name: create IGW
+    ec2_vpc_igw:
+      vpc_id: "{{vpc_id}}"
+      region: "{{region}}"
+      tags:
+        Name: "{{name}}"
+    register: igw 
